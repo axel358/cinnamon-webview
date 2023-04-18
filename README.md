@@ -1,2 +1,2 @@
-# cinnamon-chat-gpt
-A Cinnamon applet to interact with ChatGPT
+# cinnamon-webview
+A Cinnamon applet to display web pages
