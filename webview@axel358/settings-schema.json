@@ -1,0 +1,25 @@
+{
+   "head": {
+      "type": "header",
+      "description": "Settings"
+   },
+   "title": {
+      "type": "entry",
+      "default": "Google",
+      "description": "Page title",
+      "tooltip": "The title shown"
+   },
+   "webpage": {
+      "type": "entry",
+      "default": "https://google.com",
+      "description": "Webpage",
+      "tooltip": "The webpage to load"
+   }
+   ,
+   "icon": {
+      "type": "entry",
+      "default": "web-symbolic",
+      "description": "Icon",
+      "tooltip": "Can be an icon nameor a path. Hint: add '-symbolic' at the name of the icon to make it smaller"
+   }
+}
