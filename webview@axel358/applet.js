@@ -5,12 +5,14 @@ const St = imports.gi.St;
 const Settings = imports.ui.settings;
 const Util = imports.misc.util;
 const GLib = imports.gi.GLib;
+const AppletID = "webview@axel358";
+const AppletDir = imports.ui.appletManager.appletMeta[AppletID].path;
 
 class WebviewApplet extends Applet.IconApplet {
 
     constructor(metadata, orientation, panel_height, instance_id) {
         super(orientation, panel_height, instance_id);
-        this.settings = new Settings.AppletSettings(this, "webview@axel358", instance_id);
+        this.settings = new Settings.AppletSettings(this, AppletID, instance_id);
 
         this.settings.bind("webpage", "webpage", this.on_settings_changed);
         this.settings.bind("title", "title", this.on_settings_changed);
@@ -39,7 +41,7 @@ class WebviewApplet extends Applet.IconApplet {
     }
 
     on_applet_clicked() {
-        Util.spawnCommandLine(".local/share/cinnamon/applets/webview@axel358/window.py " + this.title + " " + this.webpage);
+        Util.spawnCommandLine(AppletDir + "/window.py " + this.title + " " + this.webpage);
     }
 
     on_settings_changed() {
